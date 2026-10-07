@@ -1,1 +1,14 @@
-com.synchronize.app://oauth/mojo
+<!DOCTYPE html>
+<html>
+<head><title>Synchronize Auth</title></head>
+<body>
+<script>
+  // Forward ALL query parameters to the app, not just the code
+  const params = window.location.search;
+  if (params) {
+    window.location.href = 'com.synchronize.app://oauth/mojo' + params;
+  }
+</script>
+<p>Redirecting back to Synchronize...</p>
+</body>
+</html>
